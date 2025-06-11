@@ -1,0 +1,453 @@
+/* ^Start home^*/
+.Home{
+    position: relative;
+}
+
+.Home .carousel-item{
+    height: 100vh;
+}
+
+.Home .carousel-caption{
+    bottom: 340px;
+}
+
+.buttons-slide{
+    background-color: transparent;
+    width: 45px;
+    border: 1px solid white;
+    border-left: 0;
+    top: 50%;
+    position: absolute;
+    cursor: pointer;
+    height: 120px;
+}
+
+.buttons-slide hr{
+    color: #fff;
+}
+
+.buttons-slide .carousel-control-next, .carousel-control-prev{
+    position: static;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block; 
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 0;
+    padding: 0;
+    color: #fff;
+    text-align: start;
+    opacity: 1;
+    transition: 0;
+}
+
+.angelrigt{
+    color: #7f7f90;
+    transition: 0.3s all ease-in-out;
+    margin-left: 15px;
+}
+
+.angelrigt:hover{
+    color: #fff;
+}
+
+.angelleft{
+    margin-left: 15px;
+    color: #7f7f90;
+    transition: 0.3s all ease-in-out;
+}
+
+.angelleft:hover{
+    color: #fff;
+}
+
+.mouse{
+    position: absolute;
+    width: 26px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 13px;
+    background: transparent;
+    bottom: 30px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transition: all 0.3s
+}
+
+.mouse a{
+    display: block;
+    width: 26px;
+    height: 40px;
+}
+
+.mouse .wheel{
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 6px;
+    left: 0;
+    right: 0;
+    animation: magic-mouse 1.7s infinite ease;
+}
+
+.chatbot{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: pulse 1.5s infinite;
+    /* box-shadow: 2px 2px 6px #7f7f90; */
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    bottom: 40px;
+    right: 20px;
+    position: absolute;
+    position: fixed;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.chatbot img{
+    width: 85%;
+   
+}
+/* End Home */
+
+
+
+/* ^--------------^Start Identify-----------------   ^ */
+.identify{
+    background-image:linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2)),url(../../../assets/images/imageedit_6_5699000804.png);
+    background-position: center center;
+    background-size: cover;
+
+}
+
+#diagnoses{
+    background-color: #DFF7F1;
+}
+
+.fa-layer-group{
+    font-size: 90px;
+    color: #DCE1E0;
+    margin-bottom: 40px;
+}
+
+.btns-color{
+    background-color: #00A362;
+    border: #fff 1px solid;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s all ease-in-out;
+}
+
+.btns-color:hover{
+    background-color: transparent;
+    color: #00A362;
+    border: #00A362 1px solid;
+}
+
+.identify .box{
+    background-color: #fff;
+    padding: 4rem 2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;     
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+} 
+
+.btns-color[_ngcontent-ng-c1094075242] {
+    background-color: #00A362;
+    border: transparent;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s all ease-in-out;
+}
+/* ^--------------^End Identify-----------------   ^ */
+
+
+/* ^<<<<<<<<<<<<<<Downlowd>>>>>>>>>>>>>>>>^ */
+.dowmload{
+    background-color: #f5f5f5;
+}
+
+.dowmload-image{
+    width: 75%;
+    height: auto;
+    border-radius: 50px;
+    display: flex;
+}
+
+#downlowd .row{
+    align-items: center;
+}
+
+.image-error{
+    width: 67%;
+    top: 74%;
+    left: 20px;
+}
+
+.btns-download{
+    background-color: transparent;
+    border: #00A362 1px solid;
+    color: #00A362;
+    font-weight: 600;
+    padding: 8px 16px;
+    transition: 0.3s all ease-in-out;
+}
+
+.btns-download:hover{
+    background-color: #00A362;
+    color: #fff;
+    border: transparent 1px solid;
+}
+/* ^<<<<<<<<<<<<<<End Downlowd>>>>>>>>>>>>>>>>^ */
+
+
+/* ^,<<<<<<<<<<<<<<<<<<Start Search>>>>>>>>>>>>>^ */
+#search {
+    background-color: #DFF7F1;
+}
+.AiResponse{
+    font-size: medium;
+    font-weight: 700;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 .25rem rgba(0, 163, 98, .45) !important;
+}
+
+.search-icon{
+    top: 20px;
+    left: 18px
+}
+
+.btn-search{
+    top:8px;
+    right: 10px;
+}
+  
+#search .search-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#search .search-content img{
+    width: 170px;
+    height: 181px;
+}
+/* ^,<<<<<<<<<<<<<<<<<<End Search>>>>>>>>>>>>>^ */
+
+
+/* *Start Common Problems* */
+#common{
+    background-color: #f5f5f5;
+}
+
+#common .read-more{
+    align-items: start;
+    color: #2f8115;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.common_Problems .read-more:hover{
+    color: #131a19;
+}
+
+.scale-edit{
+    transition: 0.3s all ;
+    cursor: pointer;
+}
+
+.scale-edit:hover{
+    transform: scale(1.03);
+}
+/* *End Common Problems* */
+
+
+/* *chatbot */
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+    70% {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+  }
+
+  
+/* *end chatbot */
+
+
+/* Start Details */
+.fa-close{
+    cursor: pointer;
+}
+
+.btn-show{
+    transition: 0.3s all ease-in-out;
+}
+
+.btn-show:hover{
+    background-color: #FFC106;
+}
+
+.btn-show a{
+    text-decoration: none;
+    color: #00A362;
+}
+
+.editAllColor{
+    color: #00A362;
+}
+
+.fa-circle-exclamation{
+    color: #00A362;
+    background-color: #f8f7f7;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e2e0e0;
+}
+
+.fa-hand-holding-heart{
+    color: #00A362;
+    background-color: #f8f7f7;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e2e0e0;
+}
+/* End Details */
+
+
+
+
+
+/* Start Home */
+@media (max-width: 768px) {
+    .img-download{
+        order: 0;
+    }
+
+    .content-download{
+        order: 1;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .Home .carousel-caption{
+        bottom: 250px;
+    }
+    h1{
+        font-size:37px;
+        font-weight: 700;
+        max-width: 500px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .Home .carousel-caption{
+        bottom: 140px;
+    }
+    h1{
+        font-size:30px;
+        font-weight: 700;
+    }
+
+}
+/* End Home */
+
+
+/* Start Identify */
+@media (max-width: 768px) {
+    #diagnoses .container{
+        width: 92% !important;
+    }
+}
+
+@media (max-width: 387px) {
+    .btns-color{
+        background-color: #00A362;
+        border: #fff 1px solid;
+        color: #fff;
+        font-weight: 500;
+        font-size: 14px;
+        transition: 0.3s all ease-in-out;
+    }
+}
+
+@media (max-width: 369px) {
+    .btns-color{
+        background-color: #00A362;
+        border: #fff 1px solid;
+        color: #fff;
+        font-weight: 700;
+        font-size: 12px;
+        transition: 0.3s all ease-in-out;
+    }
+
+}
+/* End Identify */
+
+
+
+
+
+
+
+
+
+
+
+@keyframes magic-mouse {
+    0% {
+        top: 6px;
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        top: 18px;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+<section id="details" class="details py-5" *ngIf="diagnosisData">
+    <div class="container pt-5">
+        <div class="row pt-4">
+            <div class="col-md-3"></div>
+            <div class="box col-md-6 gy-4 text-center p-0">
+                <img *ngIf="imageUrl" [src]="imageUrl" alt="Uploaded plant" />
+                <span class="text-overlay"></span>
+                <h5>{{ diagnosisData.plantName }} ({{ diagnosisData.status }})</h5>
+            </div>
+            <div class="col-md-3"></div>
+
+            <div class="details-content mb-2">
+                <i class="fa-solid fa-circle-info fs-4"></i><span class="fs-2"> Description</span>
+                <p class="fs-5">{{ diagnosisData.details.description }}</p>
+            </div>
+
+            <!-- لو النبات سليم (Healthy) -->
+            <div *ngIf="diagnosisData.status === 'healthy'" class="details-content mb-2">
+                <i class="fa-solid fa-circle-info fs-4"></i><span class="fs-2"> Additional Information</span>
+                <p class="fs-5">{{ diagnosisData.details.additionalInformation }}</p>
+            </div>
+
+            <!-- لو النبات فيه مرض -->
+            <div *ngIf="diagnosisData.status !== 'healthy'" class="details-content mb-2">
+                <i class="fa-solid fa-stethoscope fs-4"></i><span class="fs-2"> Treatment</span>
+                <p class="fs-5">{{ diagnosisData.details.treatment }}</p>
+            </div>
+
+
+            <div class="details-content mb-2">
+                <i class="fa-solid fa-leaf fs-4"></i><span class="fs-2"> Diagnosed as</span>
+                <p class="fs-5">{{ diagnosisData.details.plantName }} ({{ diagnosisData.details.status }})</p>
+            </div>
+
+            <button class="btns-account rounded-5 ms-auto mt-3" (click)="savePlant()">+ Save</button>
+        </div>
+    </div>
+</section>

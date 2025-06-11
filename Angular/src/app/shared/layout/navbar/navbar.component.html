@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg bg-white position-fixed fixed-top ps-lg-5 shadow-sm">
+  <div class="container-xl ps-lg-5">
+    <div class="nav-logo">
+      <a routerLink="/home">
+        <img src="assets/images/Green_and_White_Circle_Plant-Based_Restaurant_Logo-removebg-preview.png" class="pb-2"
+          alt="">
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ps-0 ps-lg-5 w-100 nav-links ul-edit">
+        @if (isLoggedIn) {
+        <li class="nav-item ps-0 ps-lg-5">
+          <a routerLink="/home" class="Home nav-link fs-5 ps-0 ps-lg-5" aria-current="page"
+            routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="Diagnoses nav-link fs-5 ps-0 ps-lg-4" routerLinkActive="active" routerLink="/"
+            fragment="diagnoses">Diagonses & Identify</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/" fragment="search" class="Search nav-link fs-5 ps-0 ps-lg-4"
+            routerLinkActive="active">Search</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/" fragment="common" class="Common nav-link fs-5 ps-0 ps-lg-4"
+            routerLinkActive="active">Problems</a>
+        </li>
+        }
+
+        <div class="d-lg-flex ms-lg-auto pe-3 align-items-center">
+          @if (!isLoggedIn) {
+            <li class="nav-item">
+              <button routerLink="/login" class=" btns-download  rounded-5 nav-link me-2 px-4">Login</button>
+            </li>
+            <li class="nav-item">
+              <button routerLink="/register" class=" btns-account rounded-5 nav-link px-4 mt-2 mt-lg-0">Register</button>
+            </li>
+          }
+
+
+          @if (isLoggedIn) {
+          <li class="nav-item dropdown me-4 mt-2 mt-lg-0 ">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-user fs-5"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/savedSearch">Saved Searches</a></li>
+              <li><a class="dropdown-item" routerLink="/settings">Settings</a></li>
+              <li>
+                <a (click)="logOut()" class="dropdown-item signOut-edit">SignOut</a>
+              </li>
+            </ul>
+          </li>
+          }
+
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>

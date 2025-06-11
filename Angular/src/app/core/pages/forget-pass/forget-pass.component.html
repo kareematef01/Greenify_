@@ -1,0 +1,104 @@
+<div class="min-vh-100 d-flex align-items-center justify-content-center flex-column forget-section">
+
+  <!-- Email Form -->
+  @if (!isCodeForm && !isNewPassForm) {
+  <div class="p-5 w-100 form-edit" style="max-width: 500px">
+    <h2 class="text-center text-success fw-bold mb-4">Forget Password</h2>
+
+
+    <form [formGroup]="emailForm" (ngSubmit)="verifyEmailBtn()">
+      @if (errorMessage) {
+      <div class="alert alert-danger text-center small" role="alert">
+        <i class="fa-solid fa-circle-exclamation me-1"></i> {{errorMessage}}
+      </div>
+      }
+
+      <div class="mb-3">
+        <label for="email" class="form-label text-white">Email</label>
+        <input type="email" formControlName="email" id="email" class="form-control" placeholder="Enter your email"
+          required>
+      </div>
+
+      <button type="submit" class="btn btn-success w-100">
+        Continue
+        @if (isLoading) {
+        <span class="ms-2"><i class="fa-solid fa-spinner fa-spin"></i></span>
+        }
+      </button>
+
+      <p class="text-center mt-3 text-white">Remember your password?
+        <a routerLink="/login" class="text-success fw-semibold text-decoration-underline">Login</a>
+      </p>
+    </form>
+  </div>
+  }
+
+  <!-- Code Form -->
+  @if (isCodeForm) {
+  
+
+  <div class="p-5 w-100 form-edit" style="max-width: 500px">
+    <h2 class="text-center text-success fw-bold mb-4">Verify Code</h2>
+    <form [formGroup]="CodeForm" (ngSubmit)="verifyCodeBtn()">
+      @if (errorMessage) {
+      <div class="alert alert-danger text-center small" role="alert">
+        <i class="fa-solid fa-circle-exclamation me-1"></i> {{errorMessage}}
+      </div>
+      }
+
+      <div class="mb-3">
+        <input type="text" formControlName="resetCode" id="code" class="form-control" placeholder="Enter verify code"
+          required>
+      </div>
+
+      <button type="submit" class="btn btn-success w-100">
+        Verify
+        @if (isLoading) {
+        <span class="ms-2"><i class="fa-solid fa-spinner fa-spin"></i></span>
+        }
+      </button>
+
+      <p class="text-center text-white mt-3">Remember your password?
+        <a routerLink="/login" class="text-success fw-semibold text-decoration-underline">Login</a>
+      </p>
+    </form>
+  </div>
+  }
+
+  <!-- New Password Form -->
+  @if (isNewPassForm) {
+  
+
+  <div class="p-5 w-100 form-edit" style="max-width: 500px">
+    <h2 class="text-center text-success fw-bold mb-4">New Password</h2>
+    <form [formGroup]="newPassForm" (ngSubmit)="newPasswordBtn()">
+      @if (errorMessage) {
+      <div class="alert alert-danger text-center small" role="alert">
+        <i class="fa-solid fa-circle-exclamation me-1"></i> {{errorMessage}}
+      </div>
+      }
+
+      <div class="mb-3">
+        <input type="email" formControlName="email" id="email" class="form-control" placeholder="" required readonly>
+      </div>
+
+      <div class="mb-3">
+        <input type="password" formControlName="newPassword" id="password" class="form-control"
+          placeholder="Enter new password" required>
+      </div>
+
+      <button type="submit" class="btn btn-success w-100">
+        Save
+        @if (isLoading) {
+        <span class="ms-2"><i class="fa-solid fa-spinner fa-spin"></i></span>
+        }
+      </button>
+
+      <p class="text-center text-white mt-3">Remember your password?
+        <a routerLink="/login" class="text-success fw-semibold text-decoration-underline">Login</a>
+      </p>
+    </form>
+  </div>
+  }
+
+</div>

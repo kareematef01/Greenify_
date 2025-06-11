@@ -1,0 +1,58 @@
+<section id="details" class="details py-5" *ngIf="plantData">
+    <div class="container pt-5">
+        <div class="row pt-4">
+            <div class="col-md-1"></div>
+            <div class="box col-md-5 gy-4 text-center p-0">
+                <img [src]="plantData.images[0]?.imageUrl" class="w-100" alt="{{ plantData.plantName }}" />
+                <span class="text-overlay"></span>
+                <h5>{{ plantData.plantName }} ({{ plantData.scientificName }})</h5>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5 box gy-4 text-center p-0">
+                <img [src]="plantData.images[1]?.imageUrl" class="w-100" alt="{{ plantData.plantName }}" />
+                <span class="text-overlay"></span>
+                <h5>{{ plantData.plantName }} ({{ plantData.scientificName }})</h5>
+            </div>
+            <div class="col-md-1"></div>
+
+            <div class="details-content mb-2">
+                <i class="fa-solid fa-circle-info fs-4"></i><span class="fs-2"> About</span>
+                <p class="fs-5">{{ plantData.about }}</p>
+            </div>
+
+            <div class="details-content mb-2">
+                <i class="fa-regular fa-sun fs-4"></i><span class="fs-2"> Sunlight</span>
+                <p class="fs-5">{{ plantData.details.sunlight }}</p>
+            </div>
+
+            <div class="details-content mb-2">
+                <i class="fa-solid fa-water fs-4"></i><span class="fs-2"> Water</span>
+                <p class="fs-5">{{ plantData.details.water }}</p>
+            </div>
+
+            <div class="details-content mb-2">
+                <i class="fa-solid fa-temperature-three-quarters fs-4"></i><span class="fs-2"> Temperature</span>
+                <p class="fs-5">{{ plantData.details.temperature }}</p>
+            </div>
+
+            <div class="details-content mb-2">
+                <i class="fa-solid fa-recycle fs-4"></i><span class="fs-2"> Repotting</span>
+                <p class="fs-5">{{ plantData.details.repotting }}</p>
+            </div>
+
+            <div class="details-content mb-2">
+                <i class="fa-solid fa-leaf fs-4"></i><span class="fs-2"> Fertilizing</span>
+                <p class="fs-5">{{ plantData.details.fertilizing }}</p>
+            </div>
+
+            <div class="details-content mb-2">
+                <i class="fa-solid fa-bug fs-4"></i><span class="fs-2"> Pests</span>
+                <p class="fs-5">{{ plantData.details.pests }}</p>
+            </div>
+
+            
+
+            <button class="btns-account rounded-5 ms-auto mt-3" (click)="savePlant()">+ Save</button>
+        </div>
+    </div>
+</section>

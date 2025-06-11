@@ -1,0 +1,20 @@
+section {
+    background-image: url(../../../../assets/images/wallpaperflare.com_wallpaper\ \(6\).jpg);
+    padding-top: 120px;
+    padding-bottom: 50px;
+    font-size: 16px;
+    font-family: var(--font) !important;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  
+  :root{
+    --font: "Poppins", sans-serif;
+  }
+
+ form{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    box-shadow: 0 0 7px 3px rgba(0,163,98,0.5);
+ }
+ 

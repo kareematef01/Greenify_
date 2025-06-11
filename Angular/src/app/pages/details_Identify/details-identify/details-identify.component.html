@@ -1,0 +1,54 @@
+<section id="details" class="details py-5" *ngIf="identifyData">
+  <div class="container pt-5">
+    <div class="row pt-4">
+      <div class="col-md-3"></div>
+      <div class="box col-md-6 gy-4 text-center p-0">
+        <img *ngIf="imageUrl" [src]="imageUrl" alt="Uploaded plant" class="w-100 rounded-3" />
+        <span class="text-overlay"></span>
+        <h5>{{ identifyData.identifiedName }} ({{ identifyData.details.scientificName }})</h5>
+      </div>
+      <div class="col-md-3"></div>
+
+      <div class="details-content mb-2">
+        <i class="fa-solid fa-sun fs-4"></i><span class="fs-2"> Sunlight</span>
+        <p class="fs-5">{{ identifyData.details.growingConditions.sunlight }}</p>
+      </div>
+
+      <div class="details-content mb-2">
+        <i class="fa-solid fa-water fs-4"></i><span class="fs-2"> Water</span>
+        <p class="fs-5">{{ identifyData.details.growingConditions.water }}</p>
+      </div>
+
+      <div class="details-content mb-2">
+        <i class="fa-solid fa-mountain fs-4"></i><span class="fs-2"> Soil Type</span>
+        <p class="fs-5">{{ identifyData.details.growingConditions.soilType }}</p>
+      </div>
+
+      <div class="details-content mb-2">
+        <i class="fa-solid fa-palette fs-4"></i><span class="fs-2"> Flower Color</span>
+        <p class="fs-5">{{ identifyData.details.flower.color }}</p>
+      </div>
+
+      <div class="details-content mb-2">
+        <i class="fa-solid fa-spa fs-4"></i><span class="fs-2"> Flower Morphology</span>
+        <p class="fs-5">{{ identifyData.details.flower.morphology }}</p>
+      </div>
+
+      <div class="details-content mb-2" *ngIf="identifyData.details.vitamins?.length">
+        <i class="fa-solid fa-capsules fs-4"></i><span class="fs-2"> Vitamins</span>
+        <ul class="fs-5">
+          <li *ngFor="let vitamin of identifyData.details.vitamins">{{ vitamin }}</li>
+        </ul>
+      </div>
+
+      <div class="details-content mb-2" *ngIf="identifyData.details.healthBenefits?.length">
+        <i class="fa-solid fa-heart-pulse fs-4"></i><span class="fs-2"> Health Benefits</span>
+        <ul class="fs-5">
+          <li *ngFor="let benefit of identifyData.details.healthBenefits">{{ benefit }}</li>
+        </ul>
+      </div>
+
+      <button class="btns-account rounded-5 ms-auto mt-3" (click)="savePlant()">+ Save</button>
+    </div>
+  </div>
+</section>

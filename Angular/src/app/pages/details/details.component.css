@@ -1,0 +1,86 @@
+#details{
+    background-color: #F6F6F0;
+    padding: 0px;  
+}
+#details .box{
+    background-color: #EFEDE7;
+    border-radius: 20px 20px 20px 20px;
+    position: relative;
+}
+
+#details h5{
+    text-align: left;
+    padding: 15px;
+    color: #686765;
+}
+#details img{
+    border-radius: 20px 20px 0px 0px;
+    height: 87%;
+}
+
+#details .text-overlay {
+    position: absolute; 
+    top: 5%; 
+    left: 5%;  
+    padding: 5px 10px;
+    font-size: 22px; 
+    font-weight: 600;
+    text-align: left;
+    border-radius: 5px; 
+    color: #00A362;
+}
+
+#details .details-content{
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;    
+}
+
+#details .details-content span{
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    color: #1C3C3A;
+    font-size: 46px;
+    text-align: left;  
+}
+#details .details-content i{
+    color: #1C3C3A;
+}
+
+#details .details-content p{
+    margin-top: 20px;
+    color: black;
+}
+
+.btns-account{
+    background-color: #00A362;
+    border: transparent 1px solid;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s all ease-in-out;
+    padding: 8px 100px;
+    width: fit-content;
+}
+
+.btns-account:hover{
+    background-color: transparent;
+    color: #00A362;
+    border: #00A362 1px solid;  
+}
+
+
+@media (max-width: 576px) {
+    #details .box{
+        width: 95%;
+        margin: auto;
+    }
+
+    .btns-account{
+        width: 95%;
+        margin: auto;
+    }
+}

@@ -1,0 +1,16 @@
+/* Start Foooter */
+.footer{
+    background-image: url(../../../../assets/images/eb52bc0465c2852f76368f30ce992cd6.png);
+    filter: brightness(80%);
+    background-position: center;
+    background-size: cover;
+    color: #FFFACB;
+    padding: 40px 0;
+}
+
+.right-app{
+    background-color: #1c3c3A;
+    color: white;
+    cursor: pointer;
+}
+/* End Foooter */

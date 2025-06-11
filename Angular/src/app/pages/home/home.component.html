@@ -1,0 +1,568 @@
+<div class="Home d-flex justify-content-center align-items-center home" id="home">
+    <div class="container-fluid p-0">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/wallpaperflare.com_wallpaper (7).jpg" class="d-block vh-100 w-100"
+                        alt="...">
+                    <div class="carousel-caption ">
+                        <h1 class="text-white ">Make Your Home Liverly</h1>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/wallpaperflare.com_wallpaper (6).jpg" class="d-block vh-100 w-100"
+                        alt="...">
+                    <div class="carousel-caption">
+                        <h1 class="text-white">Make Your Home Liverly</h1>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/wallpaperflare.com_wallpaper (4).jpg" class="d-block vh-100 w-100"
+                        alt="...">
+                    <div class="carousel-caption">
+                        <h1 class="text-white">Make Your Home Liverly</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons-slide rounded-end-1">
+                <div class="angle-next pt-3 carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <i class="fa-solid fa-angle-right angelrigt fs-3"></i>
+                </div>
+                <hr>
+                <div class="angle-left carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <i class="fa-solid fa-angle-left angelleft fs-3"></i>
+                </div>
+            </div>
+
+            <div class="mouse hidden-xs">
+                <a routerLink="/about"><span class="wheel"></span></a>
+            </div>
+
+            <div class="chatbot" (click)="showChat($event)">
+                <img src="../../../assets/images/WhatsApp_Image_2025-04-19_at_01.14.39_1baa193f-removebg-preview.png"
+                    class="w-100 ms-1 mb-1" alt="">
+            </div>
+
+            <div class="chat-wrapper position-fixed bottom-0 end-0 p-3 z-3">
+                <app-chat-bot *ngIf="showChatBot" class="chat-container"></app-chat-bot>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="diagnoses" class="identify diagnoses">
+    <div class="content-iden d-flex flex-column align-items-center py-5 text-center">
+        <h2 class="fw-bolder">Diagonses & Identify plants</h2>
+        <p class="text-secondary px-2">Instantly identify plants, flowers, and trees. Explore gardening tips,
+            detailed care
+            guides, and the plant
+            world around you.</p>
+    </div>
+    <div class="container pb-5 px-xl-5">
+        <div class="row gy-3 pb-3">
+            <div class="col-lg-5 box">
+                <img src="assets/images/62109d3d78e5a8b1f069d82f58c93f7b.png" alt="">
+                <input type="file" (change)="onImageSelected($event)" accept="image/*"
+                    class="form-control btns-color rounded-5 mb-2 mt-5">
+                <button (click)="diagnose()" class="btns-download rounded-5 mt-4"><i class="fa-solid fa-notes-medical fs-6 me-2"></i>Check Plant Health</button>
+                @if (isLoading) {
+                <div class="d-flex justify-content-center mt-3">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                }@else {
+                <div *ngIf="message" class="alert alert-warning mt-2">
+                    {{ message }}
+                </div>
+                }
+                <p class="text-center fw-medium text-secondary mt-4">(For Diagonses Plants)</p>
+            </div>
+            <div class="col-lg-2 "></div>
+            <div class="col-lg-5 box">
+                <img src="assets/images/62109d3d78e5a8b1f069d82f58c93f7b.png" alt="">
+                <input type="file" (change)="onImageSelected($event)" accept="image/*" class="form-control btns-color rounded-5 mb-2 mt-5">
+                <button (click)="Identify()" class="btns-download rounded-5 mt-4"><i class="fa-solid fa-spa fs-6 me-2"></i>Know Your Plant</button>
+                @if (isLoading2) {
+                <div class="d-flex justify-content-center mt-3">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                }@else {
+                <div *ngIf="message2" class="alert alert-warning mt-2">
+                    {{ message2 }}
+                </div>
+                }
+                <p class="text-center fw-medium text-secondary mt-4">(For Identify Plants)</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="downlowd" class="download py-5 px-md-5">
+    <div class="container">
+        <div class="download-content">
+            <div class="row gy-3">
+                <div class="box col-md-6 content-download">
+                    <h2 class="fw-bolder fs-4">Instantly identify plants with a snap</h2>
+                    <p class="text-secondary">Snap a photo for instant plant ID, gaining quick insights on disease
+                        prevention,
+                        treatment, toxicity,
+                        care, uses, and symbolism, etc.</p>
+                    <button class="btns-download rounded-5" type="submit"><span><i
+                                class="fa-solid fa-download me-1"></i></span> Download the App for Free</button>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="box col-md-4 position-relative img-download">
+                    <img src="assets/images/438ce85a3d0b7d500c678a9792f34f83.png" class="dowmload-image ms-lg-5" alt="">
+                    <img src="assets/images/Screenshot 2024-12-11 180820.png"
+                        class="position-absolute image-error ms-lg-5" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="search" class="py-5 search">
+    <div class="container py-4">
+        <div class="search-content">
+            <img src="assets/images/dbe9a92a4a5f3caecdbf49afc6439c03.png" alt="">
+            <h2 class="fw-bolder mt-2">search plants</h2>
+            <p class="text-center text-secondary">Explore a vast variety of plants, flowers, succulents, and trees
+                in your
+                surroundings.
+            </p>
+        </div>
+        <div class="my-2 my-lg-0 position-relative">
+            <!-- Search Input -->
+            <input class="form-control mr-sm-2 px-5 py-3 rounded-5 mt-3" [(ngModel)]="prompt" type="search"
+                placeholder="Enter the plant name..." (keyup.enter)="getSearchPlant()" aria-label="Search" />
+            <i class="fa-solid fa-magnifying-glass fs-5 text-secondary position-absolute search-icon"></i>
+            <button (click)="getSearchPlant()" class="btns-color rounded-5 py-2 px-4 position-absolute btn-search">
+                Search
+            </button>
+
+            <!-- Loading Spinner -->
+            @if (isLoading) {
+            <div class="d-flex justify-content-center mt-3">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            }@else {
+            <div *ngIf="message" class="alert alert-warning">
+                {{ message }}
+            </div>
+            }
+            <!-- <div *ngIf="isLoading" class="d-flex justify-content-center mt-3">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div> -->
+        </div>
+
+    </div>
+</div>
+
+
+<div class="Common_Problems common" id="common">
+    <div class="container py-5">
+        <div class="Common_Problems-title text-center">
+            <h2 class="fw-bolder">Common Problems</h2>
+            <p class="text-secondary">Explore popular plants this season and learn how to identify them.</p>
+            <div class="line-mf"></div>
+        </div>
+        <div class="row gy-5 mt-1">
+            <div class="col-md-3 scale-edit" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div class=" bg-white pb-3 shadow-sm rounded-4">
+                    <img src="../../../assets/images/resized_600x600_leaf.jpg" class="w-100 rounded-top-3 text-center"
+                        alt="">
+                    <div class=" mt-4 px-2">
+                        <h2 class="fs-4 fw-medium">Yellowing Leaves (Chlorosis)</h2>
+                        <p class="text-secondary">Yellowing leaves . . . .</p>
+                        <a routerLink="/home" class="read-more text-start">Read More <span><i
+                                    class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 scale-edit" data-bs-toggle="modal" data-bs-target="#item2">
+                <div class=" bg-white  pb-3 shadow-sm rounded-4">
+                    <img src="../../../assets/images/resized_fiddle_leaf_600x600.jpg"
+                        class="w-100 rounded-top-3 text-center" alt="">
+                    <div class=" mt-4 px-2">
+                        <h2 class="fs-4 fw-medium ">Brown Tips or Edges on Leaves</h2>
+                        <p class="text-secondary">Brown tips . . . .</p>
+                        <a routerLink="/home" class="read-more text-start ">Read More <span><i
+                                    class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 scale-edit" data-bs-toggle="modal" data-bs-target="#item3">
+                <div class=" bg-white  pb-3 shadow-sm rounded-4">
+                    <img src="../../../assets/images/resized_white_mould_600x600.jpg"
+                        class="w-100 rounded-top-3 text-center" alt="">
+                    <div class=" mt-4 px-2">
+                        <h2 class="fs-4 fw-medium ">Mold or Mildew <br> Growth</h2>
+                        <p class="text-secondary ">Mold and mildew . . . .</p>
+                        <a routerLink="/home" class="read-more text-start ">Read More <span><i
+                                    class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 scale-edit" data-bs-toggle="modal" data-bs-target="#item4">
+                <div class=" bg-white  pb-3 shadow-sm rounded-4">
+                    <img src="../../../assets/images/resized_leaf_black_bg_600x600.jpg"
+                        class="w-100 rounded-top-3 text-center" alt="">
+                    <div class=" mt-4 px-2">
+                        <h2 class="fs-4 fw-medium ">Yellowing or Dropping
+                            Flowers</h2>
+                        <p class="text-secondary ">Yellowing or dropping . . . .</p>
+                        <a routerLink="/home" class="read-more text-start ">Read More <span><i
+                                    class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 scale-edit" data-bs-toggle="modal" data-bs-target="#item5">
+                <div class=" bg-white  pb-3 shadow-sm rounded-4">
+                    <img src="../../../assets/images/resized_plant_hands_600x600.jpg"
+                        class="w-100 rounded-top-3 text-center" alt="">
+                    <div class=" mt-4 px-2">
+                        <h2 class="fs-4 fw-medium ">Environmental <br> Stress</h2>
+                        <p class="text-secondary ">Environmental stressors . . . .</p>
+                        <a routerLink="/home" class="read-more text-start">Read More <span><i
+                                    class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 scale-edit" data-bs-toggle="modal" data-bs-target="#item6">
+                <div class=" bg-white  pb-3 shadow-sm rounded-4">
+                    <img src="../../../assets/images/resized_red_crown_rot_600x600.jpg"
+                        class="w-100 rounded-top-3 text-center" alt="">
+                    <div class=" mt-4 px-2">
+                        <h2 class="fs-4 fw-medium ">Stem or Crown <br> Rot</h2>
+                        <p class="text-secondary">Stem or crown rot . . . .</p>
+                        <a routerLink="/home" class="read-more text-start">Read More <span><i
+                                    class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 scale-edit" data-bs-toggle="modal" data-bs-target="#item7">
+                <div class=" bg-white  pb-3 shadow-sm rounded-4">
+                    <img src="../../../assets/images/resized_armillaria_600x600.jpg"
+                        class="w-100 rounded-top-3 text-center" alt="">
+                    <div class=" mt-4 px-2">
+                        <h2 class="fs-4 fw-medium ">Fungal Root <br> Rot</h2>
+                        <p class="text-secondary ">Fungal root rot . . . .</p>
+                        <a routerLink="/home" class="read-more text-start">Read More <span><i
+                                    class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 scale-edit" data-bs-toggle="modal" data-bs-target="#item8">
+                <div class=" bg-white  pb-3 shadow-sm rounded-4">
+                    <img src="../../../assets/images/resized_choanephora_blight_600x600.jpg"
+                        class="w-100 rounded-top-3 text-center" alt="">
+                    <div class=" mt-4 px-2">
+                        <h2 class="fs-4 fw-medium ">Powdery <br> Mildew</h2>
+                        <p class="text-secondary ">Powdery mildew . . . .</p>
+                        <a routerLink="/home" class="read-more text-start">Read More <span><i
+                                    class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal 1 -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h1 class="modal-title fs-5 editAllColor" id="exampleModalLabel">Yellowing Leaves (Chlorosis)</h1>
+                <i class="fa fa-close fs-4 editAllColor" data-bs-dismiss="modal" aria-label="Close"></i>
+            </div>
+            <div class="modal-body">
+                <img src="../../../assets/images/resized_600x600_leaf.jpg" class="w-100" alt="">
+            </div>
+            <div class="px-3 ">
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-circle-exclamation fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">About </span>
+                </div>
+                <p class="mt-1 fw-light">Yellowing leaves can indicate nutrient deficiencies, typically lack of
+                    nitrogen, iron, or magnesium. It can also result from overwatering, poor drainage, or pH imbalance.
+                </p>
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-hand-holding-heart fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">How To Care </span>
+                </div>
+                <p class="mt-1 fw-light">Adjust fertilizer application to address nutrient deficiencies, improve soil
+                    drainage, and adjust watering frequency to prevent waterlogged conditions.
+                    Consider using a balanced fertilizer or supplementing with specific micronutrients.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal 2 -->
+<div class="modal fade" id="item2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h1 class="modal-title fs-5 editAllColor" id="exampleModalLabel">Brown Tips or Edges on
+                    Leaves</h1>
+                <i class="fa fa-close fs-4 editAllColor" data-bs-dismiss="modal" aria-label="Close"></i>
+            </div>
+            <div class="modal-body">
+                <img src="../../../assets/images/resized_fiddle_leaf_600x600.jpg" class="w-100" alt="">
+            </div>
+            <div class="px-3 ">
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-circle-exclamation fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">About </span>
+                </div>
+                <p class="mt-1 fw-light">Brown tips or edges on leaves can result from underwatering,
+                    over-fertilization, or low humidity. It may also indicate salt buildup in the soil.</p>
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-hand-holding-heart fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">How To Care </span>
+                </div>
+                <p class="mt-1 fw-light">Maintain consistent watering, ensuring water penetrates the root zone without
+                    causing waterlogged conditions. Flush the soil periodically to remove excess salts.
+                    Increase humidity around the plant by misting or using a humidifier. Adjust fertilizer application
+                    to avoid over-fertilization.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal 3 -->
+<div class="modal fade " id="item3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h1 class="modal-title fs-5 editAllColor" id="exampleModalLabel">Mold or Mildew Growth</h1>
+                <i class="fa fa-close fs-4 editAllColor" data-bs-dismiss="modal" aria-label="Close"></i>
+            </div>
+            <div class="modal-body">
+                <img src="../../../assets/images/resized_white_mould_600x600.jpg" class="w-100" alt="">
+            </div>
+            <div class="px-3 ">
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-circle-exclamation fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">About </span>
+                </div>
+                <p class="mt-1 fw-light">Mold and mildew thrive in humid conditions with poor air circulation. They
+                    appear as white or gray powdery patches on leaves or stems.</p>
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-hand-holding-heart fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">How To Care </span>
+                </div>
+                <p class="mt-1 fw-light">Improve air circulation around the plant by spacing plants properly and
+                    removing debris. Avoid overhead watering, as excess moisture can promote fungal growth. Prune
+                    affected areas and treat with fungicides containing neem oil or copper if necessary.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal 4 -->
+<div class="modal fade " id="item4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h1 class="modal-title fs-5 editAllColor" id="exampleModalLabel">Yellowing or Dropping
+                    Flowers</h1>
+                <i class="fa fa-close fs-4 editAllColor" data-bs-dismiss="modal" aria-label="Close"></i>
+            </div>
+            <div class="modal-body">
+                <img src="../../../assets/images/resized_leaf_black_bg_600x600.jpg" class="w-100" alt="">
+            </div>
+            <div class="px-3 ">
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-circle-exclamation fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">About </span>
+                </div>
+                <p class="mt-1 fw-light">Yellowing or dropping flowers can occur due to various stress factors,
+                    including temperature fluctuations, inadequate light, overwatering, or underwatering.</p>
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-hand-holding-heart fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">How To Care </span>
+                </div>
+                <p class="mt-1 fw-light">To prevent yellowing or dropping flowers, ensure plants receive appropriate
+                    light levels for their species and requirements.
+                    Maintain consistent watering, allowing the soil to dry out slightly between waterings to prevent
+                    overwatering.
+                    Protect plants from extreme temperatures and environmental stressors by providing shade during the
+                    hottest part of the day and minimizing exposure to drafts or cold temperatures.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal 5 -->
+<div class="modal fade " id="item5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h1 class="modal-title fs-5 editAllColor" id="exampleModalLabel">Environmental Stress</h1>
+                <i class="fa fa-close fs-4 editAllColor" data-bs-dismiss="modal" aria-label="Close"></i>
+            </div>
+            <div class="modal-body">
+                <img src="../../../assets/images/resized_plant_hands_600x600.jpg" class="w-100" alt="">
+            </div>
+            <div class="px-3 ">
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-circle-exclamation fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">About </span>
+                </div>
+                <p class="mt-1 fw-light">Environmental stressors such as extreme temperatures, drought, air pollution,
+                    or soil contamination can weaken plants and make them more susceptible to pests and diseases.
+                    Environmental stress can also disrupt plant growth and development, leading to stunted growth, leaf
+                    drop, or flower abortion.</p>
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-hand-holding-heart fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">How To Care </span>
+                </div>
+                <p class="mt-1 fw-light">To mitigate environmental stress, provide optimal growing conditions for
+                    plants, including adequate light, water, and nutrients. Protect plants from extreme temperatures by
+                    providing shade or insulation during heatwaves or cold snaps. Minimize exposure to air pollutants or
+                    chemical contaminants by selecting appropriate planting locations and avoiding areas with known
+                    pollution sources. Implement sustainable gardening practices to conserve water, reduce soil erosion,
+                    and promote overall plant health and resilience.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal 6 -->
+<div class="modal fade " id="item6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h1 class="modal-title fs-5 editAllColor" id="exampleModalLabel">Stem or Crown Rot</h1>
+                <i class="fa fa-close fs-4 editAllColor" data-bs-dismiss="modal" aria-label="Close"></i>
+            </div>
+            <div class="modal-body">
+                <img src="../../../assets/images/resized_red_crown_rot_600x600.jpg" class="w-100" alt="">
+            </div>
+            <div class="px-3 ">
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-circle-exclamation fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">About </span>
+                </div>
+                <p class="mt-1 fw-light">Stem or crown rot is a fungal disease that affects the base of the plant,
+                    including the stems, crown, and root zone. It is often caused by overwatering, poor drainage, or
+                    injury to the plant.</p>
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-hand-holding-heart fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">How To Care </span>
+                </div>
+                <p class="mt-1 fw-light">To prevent stem or crown rot, improve soil drainage by using well-draining
+                    potting mix or amending garden soil with organic matter. Avoid overwatering and allow the soil to
+                    dry out slightly between waterings.
+                    Remove affected plant parts promptly to prevent the spread of disease and treat with
+                    fungicides if necessary.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal 7 -->
+<div class="modal fade " id="item7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h1 class="modal-title fs-5 editAllColor" id="exampleModalLabel">Fungal Root Rot</h1>
+                <i class="fa fa-close fs-4 editAllColor" data-bs-dismiss="modal" aria-label="Close"></i>
+            </div>
+            <div class="modal-body">
+                <img src="../../../assets/images/resized_armillaria_600x600.jpg" class="w-100" alt="">
+            </div>
+            <div class="px-3 ">
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-circle-exclamation fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">About </span>
+                </div>
+                <p class="mt-1 fw-light">Fungal root rot is a common problem caused by soil-borne pathogens that infect
+                    the roots of plants, leading to decay and rot. Overwatering, poor drainage, and compacted soil can
+                    create favorable conditions for fungal root rot to develop.</p>
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-hand-holding-heart fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">How To Care </span>
+                </div>
+                <p class="mt-1 fw-light">To prevent fungal root rot, ensure proper soil drainage by using well-draining
+                    potting mix or improving garden soil structure. Allow the soil to dry out slightly between waterings
+                    to prevent waterlogged conditions. Remove affected plant parts and repot the plant in fresh soil if
+                    necessary. Apply fungicides containing beneficial fungi or bacteria to suppress the growth of
+                    pathogenic fungi in the soil.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal 8 -->
+<div class="modal fade " id="item8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h1 class="modal-title fs-5 editAllColor" id="exampleModalLabel">Powdery Mildew</h1>
+                <i class="fa fa-close fs-4 editAllColor" data-bs-dismiss="modal" aria-label="Close"></i>
+            </div>
+            <div class="modal-body">
+                <img src="../../../assets/images/resized_choanephora_blight_600x600.jpg" class="w-100" alt="">
+            </div>
+            <div class="px-3 ">
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-circle-exclamation fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">About </span>
+                </div>
+                <p class="mt-1 fw-light">Powdery mildew is a fungal disease that affects a wide range of plants,
+                    including ornamentals, vegetables, and fruit trees. It appears as a white powdery coating on the
+                    surfaces of leaves, stems, and buds.</p>
+                <div class="About d-flex align-items-start">
+                    <i class="fa-solid fa-hand-holding-heart fs-6"></i>
+                    <span class="editAllColor fw-medium ps-2 mt-2">How To Care </span>
+                </div>
+                <p class="mt-1 fw-light">To manage powdery mildew, improve air circulation around the plant by spacing
+                    plants properly and pruning to increase airflow. Avoid overhead watering, as moisture on leaves can
+                    promote fungal growth. Apply fungicides containing sulfur, neem oil, or potassium bicarbonate to
+                    control the spread of the disease, following the instructions on the product label.</p>
+
+            </div>
+        </div>
+    </div>
+</div>

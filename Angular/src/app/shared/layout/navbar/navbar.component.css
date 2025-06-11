@@ -1,0 +1,49 @@
+/* Navbar */
+
+.active{
+    transition: 0.3s all ease-in-out;
+    color: #6c7271;
+}
+
+.active:hover{
+    color: #00A362 ;
+}
+
+.btns-account{
+    background-color: #00A362;
+    border: transparent 1px solid;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s all ease-in-out;
+    padding: 8px 16px;
+}
+
+.btns-account:hover{
+    background-color: transparent;
+    color: #00A362;
+    border: #00A362 1px solid;
+}
+
+.nav-logo img{
+    width: 25%;
+}
+
+.btns-download{
+    background-color: transparent;
+    border: #00A362 1px solid;
+    color: #00A362;
+    font-weight: 600;
+    padding: 8px 16px;
+    transition: 0.3s all ease-in-out;
+}
+
+.btns-download:hover{
+    background-color: #00A362;
+    color: #fff;
+    border: transparent 1px solid;
+}
+
+.signOut-edit{
+    cursor: pointer;
+}
+/* End Navbar */
