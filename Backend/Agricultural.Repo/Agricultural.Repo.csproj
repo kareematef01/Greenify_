@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<DebugType>full</DebugType>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<AnalysisLevel>latest</AnalysisLevel>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="wwwroot\images\plants\Apple1.jpg" />
+		<Content Include="wwwroot\images\plants\Apple2.jpg" />
+		<Content Include="wwwroot\images\plants\Coffee-plant1.jpg" />
+		<Content Include="wwwroot\images\plants\Coffee-plant2.jpg" />
+		<Content Include="wwwroot\images\plants\Corn1.jpg" />
+		<Content Include="wwwroot\images\plants\Corn2.jpg" />
+		<Content Include="wwwroot\images\plants\Garlic1.jpg" />
+		<Content Include="wwwroot\images\plants\Garlic2.jpg" />
+		<Content Include="wwwroot\images\plants\Grape-Fruit1.jpg" />
+		<Content Include="wwwroot\images\plants\Grape-Fruit2.jpg" />
+		<Content Include="wwwroot\images\plants\Onions1.jpg" />
+		<Content Include="wwwroot\images\plants\Onions2.jpg" />
+		<Content Include="wwwroot\images\plants\Pepper1.jpg" />
+		<Content Include="wwwroot\images\plants\Pepper2.jpg" />
+		<Content Include="wwwroot\images\plants\Potato1.jpg" />
+		<Content Include="wwwroot\images\plants\Potato2.jpg" />
+		<Content Include="wwwroot\images\plants\Sugar-cane1.jpg" />
+		<Content Include="wwwroot\images\plants\Sugar-cane2.jpg" />
+		<Content Include="wwwroot\images\plants\Wheat1.jpg" />
+		<Content Include="wwwroot\images\plants\Wheat2.jpg" />
+		<Content Include="wwwroot\images\plants\Zucchini1.jpg" />
+		<Content Include="wwwroot\images\plants\Zucchini2.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.4">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.4">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.4" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.4" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Agricultural.Core\Agricultural.Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Migrations\" />
+	</ItemGroup>
+
+</Project>

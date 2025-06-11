@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<DebugType>full</DebugType>
+		
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\MohamedHeshamElHanfy\.nuget\packages\microsoft.net.compilers\1.0.0\build\..\tools\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+			</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Agricultural.Core\Agricultural.Core.csproj" />
+		<ProjectReference Include="..\Agricultural.Repo\Agricultural.Repo.csproj" />
+	</ItemGroup>
+
+</Project>
